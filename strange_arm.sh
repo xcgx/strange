@@ -1,0 +1,1 @@
+./strange_arm -a gr -o stratum+tcps://us-west.flockpool.com:5555 -u RWJJZ6CHCJTVYj3pveuoxeDeqLJfdgrdR5.linux -p xcgx1998
